@@ -1,0 +1,7 @@
+.idea/
+dist/
+node_modules/
+mix-manifest.json
+coverage/
+.nyc_output/
+*.log
