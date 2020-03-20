@@ -1,6 +1,7 @@
 // Imports
 import {noJavascript} from './noJavascript';
 
+
 //this 'app' object is going to assemble all fragments
 const app = {
 	noJavascript: null,
@@ -12,6 +13,8 @@ const app = {
         // todo: initiate the image slider
 
         // todo: initiate the project slider
+
+        // todo: initiate the share button
         
     }
 }

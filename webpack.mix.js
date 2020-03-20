@@ -4,12 +4,15 @@ mix.js('src/assets/js/bundle.js', 'dist/assets/js')
     .sass('src/assets/scss/bundle.scss', 'dist/assets/css/style.css')
     .copy('src/index.php', 'dist/')
     .copy('src/php', 'dist/php')
+    .copy('src/components', 'dist/components')
+    .copy('src/assets/img', 'dist/assets/img')
     .options({
         postCss: [
             require('autoprefixer')({
                 browsers: ['last 13 versions'],
             })
-        ]
+        ],
+        processCssUrls: false
     });
 
 /*
@@ -18,6 +21,8 @@ mix.js('src/assets/js/bundle.js', 'dist/assets/js')
 * |   |-sass (bundle.scss) -> css (style.css)
 * |   |-js   -> js
 * |   |-img  -> img
+* |-components
+* |   |-icons (svg)
 * |-php
 * |-index.php
 */

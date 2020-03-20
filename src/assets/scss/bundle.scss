@@ -1,6 +1,7 @@
 // Settings
 @import "settings/colors";
 @import "settings/fonts";
+@import "settings/breakpoints";
 
 // Functions & mixins
 @import "functions/calculation-helpers-rem-pc";
@@ -10,16 +11,16 @@
 @import "functions/width";
 @import "functions/margin-auto";
 @import "functions/pseudo";
+@import "functions/media-queries";
 
 // Generic
 @import "generic/reset";
-
-// Objects : Media Queries, Grid layout, Sticky Footer
-
-
+@import "generic/box-sizing";
 
 // Elements or base
 @import "elements/base";
 
 // Components
-
+@import "components/header";
+@import "components/global";
+@import "components/fiche";

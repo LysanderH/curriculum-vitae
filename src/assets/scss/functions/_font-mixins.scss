@@ -36,12 +36,12 @@
 @mixin font-face($font-name, $file-name, $weight: normal, $style: normal) {
   @font-face {
     font-family: quote($font-name);
-    src: url('/themes/webartisan/dist/fonts/' + $file-name + '.eot');
-    src: url('/themes/webartisan/dist/fonts/' + $file-name + '.eot?#iefix') format('embedded-opentype'),
-    url('/themes/webartisan/dist/fonts/' + $file-name + '.woff2') format('woff2'),
-    url('/themes/webartisan/dist/fonts/' + $file-name + '.woff') format('woff'),
-    url('/themes/webartisan/dist/fonts/' + $file-name + '.ttf') format('truetype'),
-    url('/themes/webartisan/dist/fonts/' + $file-name + '.svg##{$font-name}') format('svg');
+    src: url('../../fonts/' + $file-name + '.eot');
+    src: url('../../fonts/' + $file-name + '.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/' + $file-name + '.woff2') format('woff2'),
+    url('../../fonts/' + $file-name + '.woff') format('woff'),
+    url('../../fonts/' + $file-name + '.ttf') format('truetype'),
+    url('../../fonts/' + $file-name + '.svg##{$font-name}') format('svg');
     font-weight: $weight;
     font-style: $style;
   }

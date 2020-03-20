@@ -1,0 +1,5 @@
+.c-fiche {
+  @include mq('mobile'){
+    display: none;
+  }
+}
