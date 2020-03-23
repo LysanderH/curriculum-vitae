@@ -239,32 +239,32 @@
                 leur tour aussi. Mais pas que ça, je suis un partisan du fait que ce sport peux aider les élèves à
                 améliorer leur compétances à l’école...</p>
         </section>
-        <section class="contact" id="contact">
-            <h3 class="contact__header" role="heading" aria-level="3">Contact</h3>
-            <div class="map">
-                <img src="./assets/img/staticmap.jpg" alt="Carte de la place ou Lysander vit" class="map__img">
-                <section class="business-card">
-                    <h4 class="business-card__header" role="heading" aria-level="4">
-                        Hans Lysander
-                    </h4>
-                    <img src="./assets/img/logo_lysander.png" alt="Le logo de Lysander Hans"
-                         class="business-card__logo">
-                    <div class="business-card__address" itemprop="address" itemscope
-                         itemtype="http://www.schema.org/PostalAddress">
-                        <span itemprop="streetAddress">Rue Neuve 34,</span>
-                        <span itemprop="postalCode">B-4720</span>
-                        <span itemprop="addressLocality">La Calamine</span>
-                        <span itemprop="addressCountry">Belgium</span>
-                    </div>
-                    <span itemprop="telephone"><a href="tel:+32471553304" class="business-card__link">Tel: +32 471 55 33 04</a></span>
-                    <span itemprop="email"><a href="mailto:lysander.hans@hotmail.com" class="business-card__link">lysander.hans@hotmail.com</a></span>
-                </section>
-                <a href="https://www.google.com/maps/place/Rue+Neuve+34,+4720+La+Calamine/@50.7138483,6.0038169,17z/data=!3m1!4b1!4m5!3m4!1s0x47c090756d96115d:0x592420239b8a87d6!8m2!3d50.7138483!4d6.0060056"
-                   class="map__link">Vers la carte</a>
-            </div>
-            <?php include './components/mail.php'; ?>
-        </section>
     </article>
+    <section class="contact" id="contact">
+        <h3 class="contact__header" role="heading" aria-level="3">Contact</h3>
+        <div class="map">
+            <img src="./assets/img/staticmap.jpg" alt="Carte de la place ou Lysander vit" class="map__img">
+            <section class="business-card">
+                <h4 class="business-card__header" role="heading" aria-level="4">
+                    Hans Lysander
+                </h4>
+                <img src="./assets/img/logo_lysander.png" alt="Le logo de Lysander Hans"
+                     class="business-card__logo">
+                <div class="business-card__address" itemprop="address" itemscope
+                     itemtype="http://www.schema.org/PostalAddress">
+                    <span itemprop="streetAddress">Rue Neuve 34,</span>
+                    <span itemprop="postalCode">B-4720</span>
+                    <span itemprop="addressLocality">La Calamine</span>
+                    <span itemprop="addressCountry">Belgium</span>
+                </div>
+                <span itemprop="telephone"><a href="tel:+32471553304" class="business-card__link">Tel: +32 471 55 33 04</a></span>
+                <span itemprop="email"><a href="mailto:lysander.hans@hotmail.com" class="business-card__link">lysander.hans@hotmail.com</a></span>
+            </section>
+            <a href="https://www.google.com/maps/place/Rue+Neuve+34,+4720+La+Calamine/@50.7138483,6.0038169,17z/data=!3m1!4b1!4m5!3m4!1s0x47c090756d96115d:0x592420239b8a87d6!8m2!3d50.7138483!4d6.0060056"
+               class="map__link">Vers la carte</a>
+        </div>
+        <?php include './components/mail.php'; ?>
+    </section>
 </main>
 <footer>
     <section class="projects" id="projects" aria-labelledby="projets-header">

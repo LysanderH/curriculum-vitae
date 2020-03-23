@@ -1,4 +1,7 @@
 .c-dropdown {
+  @include mq('burger'){
+    margin-left: auto;
+  }
   &__content {
     @include mq('mobile') {
       transition: max-height .5s ease-in;
