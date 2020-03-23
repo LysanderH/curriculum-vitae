@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" dir="ltr">
 <head>
     <!-- Meta information -->
     <meta charset="UTF-8">
@@ -9,6 +9,29 @@
     <meta name="description" content="Curriculum vitae de Lysander Hans, étudiant en web-multimédia à la HEPL">
     <meta name="keywords" content="CV Lysander Hans étudiant web multimédia infographie">
     <meta name="author" content="Lysander Hans">
+
+    <!--  Meta for social media todo: ausfüllen -->
+    <!-- Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://localhost">
+    <meta property="og:title" content="Lysander’s curriculum vitae">
+    <meta property="og:image" content="/assetsL/img/profiles-photo.jpg">
+    <meta property="og:description" content="Curriculum vitae de Lysander Hans, étudiant en web-multimédia à la HEPL">
+    <meta property="og:site_name" content="Lysander’s curriculum vitae">
+    <meta property="og:locale" content="fr_BE">
+    <!-- Next tags are optional but recommended -->
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!--  twitter  -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@site_account">
+    <meta name="twitter:creator" content="@individual_account">
+    <meta name="twitter:url" content="http://localhost">
+    <meta name="twitter:title" content="Lysander’s curriculum vitae">
+    <meta name="twitter:description" content="Content description less than 200 characters">
+    <meta name="twitter:image" content="https://example.com/image.jpg">
+
     <!-- stylesheets -->
     <link rel="stylesheet" href="./assets/css/style.css">
 
@@ -22,12 +45,13 @@
         trouvez une liste ici</a>) pour avoir une meilleure expérience sur ce site.
 </noscript>
 <header class="c-header" id="body-header">
-    <h1 class="c-header__heading" role="heading" aria-level="1"><span itemprop="name">Lysander</span> <span itemprop="familyName">Hans</span>
+    <h1 class="c-header__heading" role="heading" aria-level="1"><span itemprop="name">Lysander</span> <span
+                itemprop="familyName">Hans</span>
         Curriculum Vitae</h1>
-    <nav class="c-global o-nav" aria-label="Principale">
+    <nav class="c-global o-nav" aria-label="Principale" role="navigation">
         <h2 role="heading" aria-level="2" id="global-header" class="c-global__heading sro">Navigation principale</h2>
-        <label for="burger" class="c-global__label">Menu</label>
-        <input type="checkbox" class="c-global__input u-hidden" id="burger">
+        <label for="burger" class="c-global__label">Menu <span class="c-global__trigram"></span></label>
+        <input type="checkbox" class="c-global__input u-hidden" id="burger" aria-expanded="true">
         <ul class="c-global__list o-nav__list">
             <li class="c-global__item o-nav-item">
                 <a href="#cv" class="c-global__link o-nav__link" title="Allez vers la section cv">Mon Cv</a>
@@ -36,10 +60,15 @@
                 <a href="#projects" class="c-global__link o-nav__link" title="Allez vers mes projets">Mes projets</a>
             </li>
             <li class="c-global__item o-nav-item c-dropdown">
-                <button class="c-global__link o-nav__link c-dropdown__button">Français</button>
+                <label for="language-switcher" class="c-dropdown__label c-global__link o-nav__link  c-global__dropdown">Français</label>
+                <input type="checkbox" class="c-dropdown__input u-hidden" id="language-switcher" aria-expanded="false">
                 <ul class="c-dropdown__content">
-                    <li class="c-dropdown__item"><a href="/fr" class="c-dropdown__link">Deutsch</a></li>
-                    <li class="c-dropdown__item"><a href="/en" class="c-dropdown__link">English</a></li>
+                    <li class="c-dropdown__item">
+                        <a rel="alternate" href="/de" class="c-dropdown__link o-nav__link">Deutsch</a>
+                    </li>
+                    <li class="c-dropdown__item">
+                        <a rel="alternate" href="/en" class="c-dropdown__link o-nav__link">English</a>
+                    </li>
                 </ul>
             </li>
         </ul>
@@ -249,7 +278,7 @@
             <a href="#" class="project__link">Voir le projet<span class="sro"> Portfolio</span></a>
         </section>
     </section>
-        <p class="klein">&copy;Copyright 2018 Autoscout24 Belgium S.a. Tous droits réservés.</p>
+    <p class="klein">&copy;Copyright 2018 Autoscout24 Belgium S.a. Tous droits réservés.</p>
 </footer>
 <script type="text/javascript" src="./assets/js/bundle.js"></script>
 </body>

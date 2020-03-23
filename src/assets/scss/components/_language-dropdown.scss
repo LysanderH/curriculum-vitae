@@ -1,0 +1,24 @@
+.c-dropdown {
+  &__content {
+    @include mq('mobile') {
+      transition: max-height .5s ease-in;
+      max-height: 0;
+      overflow: hidden;
+    }
+  }
+
+  &__label {
+    cursor: pointer;
+  }
+
+  &__input:checked ~ &__content {
+    @include mq('mobile') {
+      max-height: none;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 8px 20px;
+  }
+}

@@ -1,23 +1,31 @@
 .c-header {
   background: #fff;
+  width: 100%;
+
+  // header if mobile width
   @include mq('mobile') {
-    padding: 9px 0 7px 0;
-    width: 100%;
+    padding: 10px 16px;
+    // Flex
     display: flex;
+    flex-direction: column;
   }
 
   &__heading {
-    background: url("../img/autoscout24.png") no-repeat 0 0;
+    background: url("../img/logo.svg") no-repeat 0 0;
     text-indent: -9999px;
     background-size: cover;
     @include mq('mobile') {
-      margin: auto;
-      width: 74px;
+      width: 160px;
       height: 35px;
     }
   }
 
-  &__heading {
-
+}
+.u-header{
+  &__division{
+    @include mq('mobile'){
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }

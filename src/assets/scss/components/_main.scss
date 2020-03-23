@@ -1,0 +1,6 @@
+.main {
+  display: grid;
+  @include mq('mobile') {
+    grid-auto-columns: 1fr;
+  }
+}
