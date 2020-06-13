@@ -1,0 +1,65 @@
+.presentation {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "carousel carousel""headline tools""overview overview";
+
+  @include media-query(0, 767px) {
+
+  }
+
+
+}
+
+.tools {
+  grid-area: tools;
+  justify-self: end;
+  padding: 20px 12px 20px 0;
+  display: flex;
+
+  &__link {
+    font-size: 1rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 12px 8px 12px 8px;
+    @include media-query(0, 767px) {
+      flex-direction: column;
+    }
+    &--print{
+      @include media-query(0, 767px) {
+        display: none;
+      }
+    }
+  }
+
+  &__span {
+    margin-left: 4px;
+  }
+}
+
+.headline {
+  grid-area: headline;
+  padding: 20px 0 20px 12px;
+
+  &__header {
+    font-size: 1.5rem;
+    color: $text;
+    line-height: 36px;
+  }
+
+  &__subheadline {
+    color: $subline;
+    line-height: 24px;
+    text-overflow: ellipsis;
+  }
+}
+#icon_star, {
+  fill: transparent;
+  stroke: #007cca;
+  stroke-width: 2;
+}
+#icon_share, #icon_print{
+  fill: #007cca;
+}
+
+

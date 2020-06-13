@@ -1,0 +1,79 @@
+.contact {
+  @include media-query(0, 767px) {
+    display: flex;
+    flex-direction: column;
+  }
+  padding-bottom: 16px;
+
+  &__heading {
+    margin: 0 0 16px 0;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    font-weight: bold;
+    padding-left: 12px;
+  }
+}
+
+.map {
+  position: relative;
+  order: -1;
+  display: flex;
+  @include media-query(0, 767px) {
+    flex-direction: column-reverse;
+  }
+
+  &__img {
+
+  }
+
+  &__link {
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3;
+    border-radius: 4px;
+    text-align: center;
+    padding: 8px 16px;
+    background-color: #fff;
+    border: solid #000 2px;
+    color: #000;
+    text-decoration: none;
+  }
+}
+
+.business-card {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: bold;
+  }
+
+  &__logo {
+    @include media-query(0, 767px) {
+      max-height: 38px;
+      width: auto;
+      align-self: start;
+    }
+  }
+
+  &__address {
+    display: flex;
+    flex-direction: column;
+    line-height: 24px;
+  }
+
+  &__wrapper {
+    display: block;
+    margin-top: 8px;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+}

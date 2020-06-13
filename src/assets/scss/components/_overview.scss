@@ -1,0 +1,119 @@
+.overview {
+  grid-area: overview;
+  border-top: 1px solid #dcdcdc;
+  padding-top: 20px;
+
+  &__heading {
+    font-size: 1.75rem;
+    padding-left: 12px;
+    line-height: 42px;
+  }
+
+  &-headline {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    //min-height: 40px;
+    padding: 0 12px;
+    &__link {
+      width: 100%;
+      text-align: center;
+      border-radius: 5px;
+      border: 1px solid #c4c4c4;
+      background-color: #f4f4f4;
+      line-height: 19.5px;
+      padding: 10.25px 0;
+      margin-bottom: 30px;
+      color: $link;
+      transition: color .2s ease-in-out;
+      &:hover, &:focus {
+        color: $link-hover;
+    }
+    }
+  }
+}
+.general {
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+  padding: 20px 0;//624 1022
+  @include media-query(624px, 1022px){
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: ". ul"". ul"". ul";
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    padding-bottom: 8px;
+  }
+  &__span {
+    margin-left: 8px;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+  &__list {
+    grid-area: ul;
+    display: flex;
+    padding-left: 12px;
+    margin: 16px 0;
+    flex-wrap: wrap;
+  }
+  &__element {
+    padding: 4px 8px;
+    margin: 2px 1px;
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    background-color: $wild-sand;
+  }
+}
+.vendor {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 16px;
+  grid-column-gap: 12px;
+  padding: 16px 12px;
+  width: 100%;
+  @include media-query(0, 1022px){
+    position: fixed;
+    bottom: 16px;
+    z-index: 10;
+  }
+  &__wrapper {
+    grid-column: 1 / span 2;
+    display: flex;
+    @include media-query(0, 1022px){
+      display: none;
+    }
+  }
+  &__span {
+    font-size: 0.825rem;
+    &--big {
+      font-weight: bold;
+    }
+  }
+  &__link {
+
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 1.3;
+    border-radius: 4px;
+    color: $text;
+    transition: all .2s ease-in;
+    &--contact {
+      background-color: #F5F200;
+      box-shadow: 0 1px 3px 0 rgba(0,0,0,0.5);
+      &:hover {
+        background-color: #fffb19;
+        color: #333;
+      }
+    }
+    &--tel {
+      border: solid #333 2px;
+      background-color: #fff;
+    }
+  }
+}

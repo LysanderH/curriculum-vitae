@@ -1,11 +1,14 @@
 html {
   background: $wild-sand;
-  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  font-family: Make It Sans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
 }
 body {
 
 }
 .o-nav__link{
-  color: $mine-shaft;
+  color: $text;
   text-decoration: none;
+}
+.sro {
+  @include sr-only;
 }

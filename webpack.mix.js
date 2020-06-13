@@ -3,16 +3,17 @@ let mix = require('laravel-mix');
 mix.js('src/assets/js/bundle.js', 'dist/assets/js')
     .sass('src/assets/scss/bundle.scss', 'dist/assets/css/style.css')
     .copy('src/index.php', 'dist/')
-    .copy('src/php', 'dist/php')
+    .copy('src/mailController.php', 'dist/mailController.php')
     .copy('src/components', 'dist/components')
-    .copy('src/assets/img', 'dist/assets/img')
+    .copyDirectory('src/assets/img', 'dist/assets/img')
     .options({
         postCss: [
             require('autoprefixer')({
                 browsers: ['last 13 versions'],
-            })
+            }),
+            require('css-mqpacker')
         ],
-        processCssUrls: false
+        processCssUrls: false,
     });
 
 /*

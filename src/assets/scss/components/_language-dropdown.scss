@@ -18,6 +18,14 @@
     @include mq('mobile') {
       max-height: none;
     }
+    @include mq('burger') {
+      position: absolute;
+      top: 4em;
+      background: white;
+    }
+    & a:hover {
+      color: $blumine;
+    }
   }
 
   &__link {
