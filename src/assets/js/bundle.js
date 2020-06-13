@@ -1,25 +1,39 @@
 // Imports
 import {noJavascript} from './noJavascript';
 import imageSlider from './imageSlider';
+import stickyNav from './stickyNav';
 
 
 //this 'app' object is going to assemble all fragments
 const app = {
 	noJavascript: null,
     imageSlider: null,
+    stickyNav: null,
 
 	init() {
         //initiate the noJavascript
         this.noJavascript = noJavascript;
         this.noJavascript.init();
 
-        // todo: initiate the image slider
+        // initiate the image slider
         this.imageSlider = imageSlider;
         this.imageSlider.init();
-        // todo: initiate the project slider
 
-        // todo: initiate the share button
+        // initiate the stickyNav
+        this.stickyNav = stickyNav;
+        this.stickyNav.init();
+
         
     }
 }
 app.init();
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+    if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+    } else {
+        navbar.classList.remove("sticky");
+    }
+}

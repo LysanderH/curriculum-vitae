@@ -1,0 +1,72 @@
+.nav-second {
+  order: -1;
+  width: 100%;
+  @include media-query(0, 1023px){
+    display: none;
+  }
+  border-bottom: 1px solid $wild-sand;
+  &--sticky {
+    display: grid;
+    grid-template-areas: "head head""nav button";
+    position: fixed;
+    top: 0;
+    max-height: 0;
+    max-width: 1088px;
+    z-index: 20;
+    flex-direction: column;
+    background-color: #fff;
+    overflow: hidden;
+    padding: 0 16px;
+    transform: translateX(-13px);
+  }
+  &__list{
+    grid-area: nav;
+    display: flex;
+    width: 100%;
+  }
+  &__link {
+    cursor: pointer;
+    text-decoration: none;
+    transition: color .2s ease-in;
+    background: none;
+    border: none;
+    color: black;
+    padding: 12px 15px 16px 0;
+    display: inline-block;
+    &:hover {
+      color:  #145bb9;
+    }
+    &--button {
+      grid-area: button;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.3;
+      border-radius: 4px;
+      color: #333;
+      transition: all .2s ease-in;
+      transition-property: color, background-color, border-color;
+      text-decoration: none;
+      text-align: center;
+      background-color: #F5F200;
+      box-shadow: 0 1px 3px 0 rgba(0,0,0,0.5);
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      &:hover {
+        background-color: #f5f200;
+      }
+    }
+  }
+  &__head {
+    margin-top: 16px;
+  }
+}
+.active-link {
+  color:  #145bb9;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  //width: 100%;
+  max-height: none;
+}

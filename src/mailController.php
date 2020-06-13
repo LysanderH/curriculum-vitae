@@ -2,11 +2,6 @@
 /**
  * Send emails
  */
-if(!isset($_SESSION)){
-    session_start();
-    var_dump('hello');
-}
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $body = $_POST['content'];
     $name = $_POST['sender-name'];
@@ -24,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
         $_SESSION['error']['mailErr'] = 'Veuillez donner une adresse mail correct example@mail.com';
     } else {
-        $_SESSION['true']['mailTrue'] = $mail;==
+        $_SESSION['true']['mailTrue'] = $mail;
     }
     if (!isset($tel) || $tel == '') {
         $_SESSION['error']['telErr'] = 'Veuillez remplir le champ numéro de téléphone "+32 471 55 33 04"';
@@ -52,11 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['message'] = 'Votre mail à été envoyé.';
     } else {
         $_SESSION['message'] = 'Votre mail n’à pas été envoyé.';
+
     }
-    header('Location: /#contact-form');
-    exit();
 }
-if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-    header('Location: /');
-    exit();
-}
+

@@ -15,6 +15,7 @@
     line-height: 1.3;
     text-align: center;
   }
+
 }
 
 .project {
@@ -50,5 +51,9 @@
     &:hover {
       background-color: #f5f200;
     }
+  }
+  &__img {
+    width: 100%;
+    height: auto;
   }
 }

@@ -2,12 +2,9 @@
 if (!isset($_SESSION)) {
     session_start();
 }
+$_SESSION['error'] = [];
 $_SESSION['true'] = [];
-$_SESSION['true']['nameTrue'] = '';
-$_SESSION['true']['telTrue'] = '';
-$_SESSION['true']['contentTrue'] = '';
-$_SESSION['true']['mailTrue'] = '';
-$_SESSION['message'] = '';
+require 'mailController.php';
 ?>
     <!doctype html>
     <html lang="fr" dir="ltr">
@@ -48,7 +45,11 @@ $_SESSION['message'] = '';
         <link rel="stylesheet" href="./assets/css/style.css">
 
         <!--  favicon  -->
-        <link rel="icon" href="./assets/img/icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon.png">
+        <link rel="mask-icon" href="./assets/img/safari-pinned-tab.svg" color="#f5f200">
+        <meta name="msapplication-TileColor" content="#333333">
+        <meta name="theme-color" content="#ffffff">
 
         <title>Lysander Hans Curriculum Vitae</title>
     </head>
@@ -164,8 +165,8 @@ $_SESSION['message'] = '';
 
         <article class="cv">
             <h2 class="cv__heading" role="heading" aria-level="2">CV</h2>
-            <nav class="nav-second sro" role="navigation" aria-label="Secondaire">
-                <h3 class="nav-second__header" role="heading" aria-level="3" id="nav-second__heade">
+            <nav class="nav-second" role="navigation" aria-label="Secondaire" id="navbar">
+                <h3 class="nav-second__header sro" role="heading" aria-level="3" id="nav-second__heade">
                     Navigation secondaire
                 </h3>
                 <ul class="nav-second__list">
@@ -183,10 +184,11 @@ $_SESSION['message'] = '';
                     </li>
                 </ul>
             </nav>
-            <nav class="nav-second nav-second--sticky" role="navigation" style="display: none;">
+            <nav class="nav-second nav-second--sticky" role="navigation">
                 <h3 class="nav-second__heading sro" role="heading" aria-level="3">
                     Navigation secondaire
                 </h3>
+                <p class="nav-second__head">Hans Lysander</p>
                 <ul class="nav-second__list">
                     <li class="nav-second__item">
                         <a href="#experience" class="nav-second__link">Expérience professionelle</a>
@@ -263,8 +265,8 @@ $_SESSION['message'] = '';
         <section class="contact" id="contact">
             <h3 class="contact__heading" role="heading" aria-level="3">Contact</h3>
             <div class="map">
-                <img src="./assets/img/map-1024_570.jpg"
-                     srcset="./assets/img/map-525_810.jpg 525w, ./assets/img/map-767_550.jpg 767w, ./assets/img/map-1024_570.jpg 1024w"
+                <img src="./assets/img/map-525_810.jpg"
+                     srcset="./assets/img/map-767_550.jpg 525w, ./assets/img/map-1024_570.jpg 767w, ./assets/img/map-525_810.jpg 1024w"
                      alt="Carte de la place ou Lysander vit" class="map__img">
                 <section class="business-card">
                     <h4 class="business-card__header" role="heading" aria-level="4">
@@ -294,7 +296,7 @@ $_SESSION['message'] = '';
         <section class="projects" id="projects" aria-labelledby="projets-header">
             <h2 id="projets-header" role="heading" aria-level="2" class="projects__header">Projets</h2>
             <section class="project" aria-label="Portfolio">
-                <img src="./assets/img/portfolio.jpg" alt="Image du portfolio de Lysander">
+                <img src="./assets/img/portfolio-screenshot.png" alt="Image du portfolio de Lysander" class="project__img">
                 <div class="project__wrapper">
                     <h3 class="project__heading">Portfolio</h3>
                     <p class="project__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam
@@ -302,7 +304,7 @@ $_SESSION['message'] = '';
                         autem cum deleniti deserunt dolorem dolorum explicabo magnam maxime necessitatibus, nemo non
                         numquam
                         obcaecati perferendis voluptas. Eius enim illo odio?</p>
-                    <a href="#" class="project__link">Voir le projet<span class="sro"> Portfolio</span></a>
+                    <a href="https://lysander-hans.com" class="project__link">Voir le projet<span class="sro"> Portfolio</span></a>
                 </div>
             </section>
         </section>

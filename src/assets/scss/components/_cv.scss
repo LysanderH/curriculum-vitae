@@ -1,7 +1,10 @@
 .cv {
   display: flex;
   flex-direction: column;
-  padding: 28px 12px;
+  padding: 0 12px;
+  @include media-query(0, 1023px){
+    padding: 28px 12px;
+  }
   border-bottom: 1px solid #dcdcdc;
 
   &__heading {

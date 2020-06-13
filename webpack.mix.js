@@ -5,7 +5,7 @@ mix.js('src/assets/js/bundle.js', 'dist/assets/js')
     .copy('src/index.php', 'dist/')
     .copy('src/mailController.php', 'dist/mailController.php')
     .copy('src/components', 'dist/components')
-    .copyDirectory('src/assets/img', 'dist/assets/img')
+    // .copy('src/assets/img', 'dist/assets/img')
     .options({
         postCss: [
             require('autoprefixer')({

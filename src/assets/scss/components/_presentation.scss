@@ -1,10 +1,16 @@
 .presentation {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: "carousel carousel""headline tools""overview overview";
 
-  @include media-query(0, 767px) {
-
+  @include media-query(0, 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "carousel carousel""headline tools""overview overview";
+  }
+  @include mq('desktop') {
+    grid-template-areas: "headline tools""carousel overview""carousel overview";
+    grid-template-columns: 58.70967741935484% 41.29032258064516%;
+    grid-column-gap: 16px;
+    padding: 16px 16px;
+    border-bottom: 8px solid $wild-sand;
   }
 
 
@@ -22,10 +28,18 @@
     display: flex;
     align-items: center;
     padding: 12px 8px 12px 8px;
+    color: #1a72e8;
+    transition: color .2s ease-in-out;
+
+    &:hover {
+      color: #1e4c7a;
+    }
+
     @include media-query(0, 767px) {
       flex-direction: column;
     }
-    &--print{
+
+    &--print {
       @include media-query(0, 767px) {
         display: none;
       }
@@ -53,13 +67,24 @@
     text-overflow: ellipsis;
   }
 }
-#icon_star, {
+
+#icon_star {
   fill: transparent;
   stroke: #007cca;
   stroke-width: 2;
+  transition: stroke .2s ease-in-out;
 }
-#icon_share, #icon_print{
+
+#icon_share, #icon_print {
   fill: #007cca;
+  transition: fill .2s ease-in-out;
 }
 
+.tools__link:hover #icon_star {
+  stroke: #1e4c7a;
+}
 
+.tools__link:hover #icon_share, .tools__link:hover #icon_print {
+  fill: #1e4c7a;
+  transition: fill .2s ease-in-out;
+}
