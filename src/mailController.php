@@ -7,6 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = $_POST['sender-name'];
     $mail = $_POST['mail'];
     $tel = $_POST['phone-number'];
+    $copy = $_POST['copy'];
 
     if (!isset($body)) {
         $_SESSION['error']['contentErr'] = 'Veuillez remplir le champ "message"';
@@ -47,7 +48,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['message'] = 'Votre mail à été envoyé.';
     } else {
         $_SESSION['message'] = 'Votre mail n’à pas été envoyé.';
-
+    }
+    if (isset($copy)){
+        mail($mail, 'Mail from CV', $message, $email_header);
     }
 }
 

@@ -63,7 +63,7 @@ Cordialement,<?php if (isset($_SESSION['true']['contentTrue'])) echo $_SESSION['
         protection des données au sérieux. Les données saisies ne seront pas utilisées à des fins publicitaires.</p>
     <div class="form__area form__area--big-text">
         <label for="copy" class="form__copy form__contact-reason">Envoyez-moi une copie
-            <input type="checkbox" class="form__checkbox" name="copy" id="copy">
+            <input type="checkbox" class="form__checkbox" name="copy[]" id="copy">
             <span class="form__checkmark"></span>
         </label>
     </div>
