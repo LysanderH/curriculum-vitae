@@ -10,11 +10,11 @@
                  alt="Portrait de Lysander Hans" class="carousel__img carousel__img--1 animated previous" data-id="0">
 
             <img src="./assets/img/lysander2-min.jpg"
-                 srcset="./assets/img/lysander-min2.jpg 1x, ./assets/img/lysander2.jpg 2x"
+                 srcset="./assets/img/lysander2-min.jpg 1x, ./assets/img/lysander2.jpg 2x"
                  alt="Portrait de Lysander Hans" class="carousel__img carousel__img--2 animated active" data-id="1">
 
             <img src="./assets/img/lysander3-min.jpg"
-                 srcset="./assets/img/lysander-min3.jpg 1x, ./assets/img/lysander3.jpg 2x"
+                 srcset="./assets/img/lysander3-min.jpg 1x, ./assets/img/lysander3.jpg 2x"
                  alt="Portrait de Lysander Hans" class="carousel__img carousel__img--3 animated next" data-id="2">
 
     </div>

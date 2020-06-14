@@ -9,11 +9,11 @@ const stickyNav = {
         this.coordinates = this.getCoords(this.regularNav).top;
 
         window.addEventListener('scroll', (e) => {
-            this.checkStickyOrNot();
+            this.checkStickyOrNot(this.coordinates);
         })
     },
-    checkStickyOrNot() {
-        if (window.pageYOffset >= this.coordinates) {
+    checkStickyOrNot(coordinates) {
+        if (window.pageYOffset >= coordinates) {
             this.nav.classList.add('sticky');
         } else {
             this.nav.classList.remove('sticky');

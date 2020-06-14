@@ -39,13 +39,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $message .= 'Message :' . PHP_EOL;
     $message .= $body;
 
-    $email_header = "From: $name <" . $mail . ">\n";
-    $email_header .= "Reply-To: " . $_POST["mail"] . "\n";
-    $email_header .= "Content-transfer-encoding: 7bit\n";
-    $email_header .= "Content-type: text/plain; charset=\"iso-2022-jp\"\n\n";
+    $email_header = "From: contact@lysander-hans.com" . "\r\n" . "Reply-To: $mail" . "\r\n";
 
     if (mail('lysander.hans@hotmail.com', 'Mail from CV', $message, $email_header)) {
         $_SESSION['message'] = 'Votre mail à été envoyé.';
+        $_SESSION['true'] = [];
+        $_SESSION['error'] = [];
     } else {
         $_SESSION['message'] = 'Votre mail n’à pas été envoyé.';
     }

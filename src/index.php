@@ -4,6 +4,11 @@ if (!isset($_SESSION)) {
 }
 $_SESSION['error'] = [];
 $_SESSION['true'] = [];
+$_SESSION['true']['contentTrue'] = "Bonjour,
+
+Je suis intéressé(e) par votre travail. Êtes-vous toujours disponible?
+
+Cordialement,";
 require 'mailController.php';
 ?>
     <!doctype html>

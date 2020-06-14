@@ -10,6 +10,9 @@ const imageSlider = {
         this.next = document.querySelector('.carousel__navigation--right');
         this.previous = document.querySelector('.carousel__navigation--left');
 
+        this.next.addEventListener('touchstart', ()=>{
+            this.nextSlide();
+        })
         this.next.addEventListener('click', ()=>{
             this.nextSlide();
         })
@@ -17,6 +20,9 @@ const imageSlider = {
             if (e.keyCode === 13){
                 this.nextSlide();
             }
+        })
+        this.previous.addEventListener('touchstart', ()=>{
+            this.previousSlide();
         })
         this.previous.addEventListener('click', ()=>{
             this.previousSlide();
